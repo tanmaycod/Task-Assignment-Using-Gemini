@@ -1,71 +1,160 @@
-# Getting Started with Create React App
+**Task Assignment Using Gemini**
+================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is an AI-powered task assignment system that leverages the Gemini API for intelligent task allocation. It includes features for task creation, team-based task assignment, and user role management (admin and member dashboards). The system is built using React.js, Firebase, and Framer Motion for advanced animations and transitions.
 
-## Available Scripts
+**Features**
+------------
 
-In the project directory, you can run:
+*   **Admin Dashboard**: Manage tasks, reassign tasks, and oversee team assignments.
+    
+*   **Member Dashboard**: View assigned tasks, mark tasks as completed, and see team details.
+    
+*   **Task Creation**: Easily create tasks with necessary details like skills and deadlines.
+    
+*   **Task Assignment**: Assign tasks intelligently to team members or individuals using the Gemini API.
+    
 
-### `npm start`
+**Getting Started**
+-------------------
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Installation**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1.  bashCopy codegit clone https://github.com/tanmaycod/Task-Assignment-Using-Gemini.gitcd Task-Assignment-Using-Gemini
+    
+2.  bashCopy codenpm install
+    
+3.  bashCopy codenpm start
+    
+4.  Open your browser and navigate to:
+    
+    *   **Create Task**: [http://localhost:3000/create-task](http://localhost:3000/create-task)
+        
+    *   **Assign Task**: [http://localhost:3000/assign-task](http://localhost:3000/assign-task)
+        
 
-### `npm test`
+### **Firebase Configuration**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  Go to the Firebase Console.
+    
+2.  Create a new project and navigate to the **Project Settings**.
+    
+3.  Under the **General** tab, find the Firebase configuration object.
+    
+4.  javascriptCopy codeconst firebaseConfig = { apiKey: "YOUR\_API\_KEY", authDomain: "YOUR\_AUTH\_DOMAIN", projectId: "YOUR\_PROJECT\_ID", storageBucket: "YOUR\_STORAGE\_BUCKET", messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID", appId: "YOUR\_APP\_ID",};
+    
+5.  Enable **Firestore**:
+    
+    *   Go to the **Firestore Database** section and create a database in "test mode."
+        
+6.  Enable **Authentication**:
+    
+    *   Go to the **Authentication** section, and enable **Email/Password** sign-in.
+        
 
-### `npm run build`
+### **Gemini API Key Configuration**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  Visit the Gemini API Documentation.
+    
+2.  Sign in with your Google Cloud account.
+    
+3.  Enable the Gemini API and create an API key in the **API & Services** section of Google Cloud Console.
+    
+4.  javascriptCopy codeconst apiKey = "YOUR\_GEMINI\_API\_KEY";
+    
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**How to Use**
+--------------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **Create a Task**
 
-### `npm run eject`
+1.  Navigate to [http://localhost:3000/create-task](http://localhost:3000/create-task).
+    
+2.  Fill in the task details:
+    
+    *   Title
+        
+    *   Description
+        
+    *   Required Skills (comma-separated)
+        
+    *   Deadline
+        
+3.  Click **Create Task**. The task will be added to the database.
+    
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Assign a Task**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.  Navigate to [http://localhost:3000/assign-task](http://localhost:3000/assign-task).
+    
+2.  Select a task from the list of pending tasks.
+    
+3.  Specify the team size.
+    
+4.  Click **Apply** to assign the task to a team.
+    
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Navigation**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*   **Admin Dashboard**: /admin
+    
+    *   Manage tasks and reassign team members.
+        
+*   **Member Dashboard**: /member
+    
+    *   View and complete tasks assigned to you.
+        
+*   **Create Task**: /create-task
+    
+    *   Add new tasks to the system.
+        
+*   **Assign Task**: /assign-task
+    
+    *   Assign tasks to team members or individuals.
+        
 
-## Learn More
+**Dependencies**
+----------------
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*   React.js
+    
+*   Firebase (Firestore and Authentication)
+    
+*   Framer Motion
+    
+*   Gemini API
+    
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Folder Structure**
+--------------------
 
-### Code Splitting
+Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cssCopy codesrc/  ├── components/  │   ├── AdminDashboard.js  │   ├── MemberDashboard.js  │   ├── CreateTask.js  │   ├── TaskAssignment.js  │   └── Auth.js  ├── context/  │   └── AuthContext.js  ├── utils/  │   ├── FirebaseConfig.js  │   └── GeminiAPI.js  ├── App.css  └── App.js   `
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Future Enhancements**
+-----------------------
 
-### Analyzing the Bundle Size
+*   Add role-based permissions.
+    
+*   Improve UI with more animations.
+    
+*   Integrate additional AI capabilities.
+    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Contributing**
+----------------
 
-### Making a Progressive Web App
+1.  Fork the repository.
+    
+2.  bashCopy codegit checkout -b feature/your-feature
+    
+3.  bashCopy codegit commit -m "Add your message"
+    
+4.  bashCopy codegit push origin feature/your-feature
+    
+5.  Open a pull request.
+    
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**License**
+-----------
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# Task-Assignment-Using-Gemini" 
+This project is licensed under the MIT License.

@@ -5,7 +5,7 @@ import TaskAssignment from "./components/TaskManagement/TaskAssignment";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
 import MemberDashboard from "./components/MemberDashboard/MemberDashboard";
 import Auth from "./components/Auth";
-import ProtectedRoute from "./ProtectedRoute"; // Import the new component
+import ProtectedRoute from "./ProtectedRoute"; 
 import { AuthProvider } from "./context/AuthContext";
 import "./styles/App.css";
 

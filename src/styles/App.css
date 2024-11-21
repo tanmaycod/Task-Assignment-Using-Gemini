@@ -1,4 +1,4 @@
-/* General Auth Styles */
+/* Auth */
 .auth-container {
   display: flex;
   justify-content: center;
@@ -39,17 +39,17 @@
   text-align: center;
   width: 100%;
   max-width: 400px;
-  overflow: hidden; /* To ensure gradient doesn't overflow the card */
+  overflow: hidden; 
 }
 
 .auth-card::before {
   content: "";
   position: absolute;
-  inset: -3px; /* Creates a border outside the card */
+  inset: -3px; 
   background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
   background-size: 400%;
   border-radius: 15px;
-  z-index: -1; /* Sends it behind the card content */
+  z-index: -1; 
   animation: moveGradient 8s infinite;
 }
 
@@ -70,7 +70,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Form and Inputs */
+
 .auth-form {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@
   transform: scale(1.2);
 }
 
-/* Button */
+
 .auth-button {
   padding: 0.8rem;
   background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -131,7 +131,7 @@
   background: linear-gradient(to right, #2575fc, #6a11cb);
 }
 
-/* Toggle Link */
+
 .auth-toggle {
   margin-top: 1rem;
   color: #6a11cb;
@@ -145,7 +145,7 @@
   transform: scale(1.1);
 }
 
-/* Animations */
+
 @keyframes moveGradient {
   0% {
       background-position: 0% 50%;
@@ -189,7 +189,7 @@
 
 
 /* member */
-/* Dashboard Container */
+
 .member-dashboard {
   padding: 2rem;
   min-height: 100vh;
@@ -222,7 +222,7 @@
 }
 
 
-/* Animated Title */
+
 .member-title {
   font-size: 3rem;
   font-weight: bold;
@@ -239,7 +239,7 @@
   text-decoration: underline;
 }
 
-/* Moving Border Below Title */
+
 .member-title-border {
   height: 4px;
   background: linear-gradient(90deg, #6a11cb, #2575fc, #ff758c);
@@ -249,7 +249,7 @@
   overflow: hidden;
 }
 
-/* Task List */
+
 .member-task-list {
   display: flex;
   flex-direction: column;
@@ -258,7 +258,7 @@
   max-width: 600px;
 }
 
-/* Task Card */
+
 .member-task-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -275,7 +275,7 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Task Title */
+
 .member-task-title {
   font-size: 1.4rem;
   font-weight: bold;
@@ -286,7 +286,7 @@
   color: #fff;
 }
 
-/* Task Icon */
+
 .member-task-icon {
   font-size: 1.8rem;
   color: #2575fc;
@@ -297,14 +297,14 @@
   transform: rotate(360deg);
 }
 
-/* Task Description */
+
 .member-task-desc {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #e0e0e0;
 }
 
-/* Task Status */
+
 .member-task-status {
   font-size: 1rem;
   font-weight: bold;
@@ -321,12 +321,12 @@
   color: #27ae60;
 }
 
-/* Status Icon */
+
 .member-status-icon {
   font-size: 1.5rem;
 }
 
-/* Task Button */
+
 .member-task-button {
   padding: 0.8rem;
   font-size: 1rem;
@@ -348,7 +348,7 @@
   transform: scale(0.95);
 }
 
-/* No Tasks Message */
+
 .member-no-tasks {
   font-size: 1.2rem;
   color: #fff;
@@ -404,7 +404,7 @@
 }
 
 
-/* Animations */
+
 @keyframes fadeIn {
   from {
       opacity: 0;
@@ -416,8 +416,6 @@
 
 
 /* admin */
-/* General Admin Styles */
-
 
 .admin-dashboard {
   position: relative;
@@ -427,7 +425,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: wave 5s infinite ease-in-out; /* Apply the keyframe animation */
+  animation: wave 5s infinite ease-in-out; 
 }
 
 .admin-dashboard::before{
@@ -562,12 +560,13 @@
   overflow: hidden;
 }
 
-/* Status Colors */
+
 .status {
   padding: 0.3rem 0.8rem;
   border-radius: 12px;
   font-size: 0.8rem;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .status-pending {
@@ -587,7 +586,6 @@
 
 /* create task */
 
-/* Task Container */
 .task-container {
   display: flex;
   flex-direction: column;
@@ -620,7 +618,7 @@
   border-radius: 50%;
 }
 
-/* Title */
+
 .task-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -631,7 +629,7 @@
   align-items: center;
 }
 
-/* Form */
+
 .task-form {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -646,7 +644,7 @@
   animation: movingBorder 6s infinite ease-in-out;
 }
 
-/* Input Wrapper */
+
 .task-input-wrapper {
   display: flex;
   align-items: center;
@@ -659,7 +657,7 @@
   font-size: 1.2rem;
 }
 
-/* Input and Textarea */
+
 .task-input,
 .task-textarea {
   flex: 1;
@@ -682,8 +680,7 @@
   height: 100px;
 }
 
-/* Button */
-/* Button */
+
 .task-button {
   padding: 0.8rem 1.5rem;
   border: none;
@@ -701,7 +698,7 @@
   cursor: not-allowed;
 }
 
-/* Progress Bar */
+
 .task-progress-bar {
   height: 5px;
   background: linear-gradient(to right, #6a11cb, #2575fc);
@@ -710,7 +707,7 @@
   overflow: hidden;
 }
 
-/* Moving Border Keyframes */
+
 @keyframes movingBorder {
   0% {
     border-radius: 10%;
@@ -729,13 +726,13 @@
   }
 }
 
-/* Input and Textarea Hover Effects */
+
 .task-input-wrapper:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease-in-out;
 }
 
-/* Title Hover Effect */
+
 .task-title:hover {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   transition: text-shadow 0.3s ease;
@@ -743,7 +740,6 @@
 
 /* assign task */
 
-/* Container */
 .assign-container {
   padding: 2rem;
   min-height: 100vh;
@@ -777,13 +773,13 @@
   border-radius: 50%;
 }
 
-/* Disable Mouse */
+
 .assign-disable-mouse {
   pointer-events: none;
   opacity: 0.8;
 }
 
-/* Title */
+
 .assign-title {
   font-size: 2.5rem;
   font-weight: bold;
@@ -799,7 +795,7 @@
   color: #2575fc;
 }
 
-/* Task List */
+
 .assign-task-list {
   list-style: none;
   padding: 0;
@@ -808,7 +804,7 @@
   max-width: 800px;
 }
 
-/* Task Item */
+
 .assign-task-item {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
@@ -824,7 +820,7 @@
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Task Title */
+
 .assign-task-title {
   display: flex;
   align-items: center;
@@ -840,7 +836,7 @@
   transform: rotate(360deg);
 }
 
-/* Button */
+
 .assign-button {
   padding: 0.8rem 1.2rem;
   background: linear-gradient(90deg, #f093fb, #f5576c);
@@ -858,7 +854,7 @@
   cursor: not-allowed;
 }
 
-/* Progress Bar */
+
 .assign-progress-bar {
   position: fixed;
   top: 0;
@@ -871,14 +867,14 @@
 
 .assign-progress-text {
   position: fixed;
-  top: 20px; /* Adjust to position it below the progress bar */
+  top: 20px; 
   left: 50%;
   transform: translateX(-50%);
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
-  z-index: 1001; /* Ensure it appears above all other elements */
-  background: rgba(0, 0, 0, 0.5); /* Add a slight background for better visibility */
+  z-index: 1001; 
+  background: rgba(0, 0, 0, 0.5); 
   padding: 0.5rem 1rem;
   border-radius: 8px;
   text-align: center;

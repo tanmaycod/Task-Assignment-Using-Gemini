@@ -79,7 +79,7 @@ const AdminDashboard = () => {
         try {
             const taskRef = doc(db, "tasks", selectedTask.id);
 
-            // If replacing a team member
+            
             if (replacingUser) {
                 const updatedTeam = selectedTask.assignedTo.map((userId) =>
                     userId === replacingUser ? selectedUser : userId
@@ -95,7 +95,7 @@ const AdminDashboard = () => {
                     availability: "busy",
                 });
             } else {
-                // Assign a single user
+              
                 await updateDoc(taskRef, {
                     assignedTo: [selectedUser],
                     status: "in progress",

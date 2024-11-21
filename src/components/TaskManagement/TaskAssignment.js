@@ -36,7 +36,7 @@ const TaskAssignment = () => {
 
   const handleAssignTaskClick = (task) => {
     setSelectedTask(task);
-    setTeamSize(1); // Reset team size
+    setTeamSize(1); 
   };
 
   const handleApplyAssignment = async () => {
@@ -51,7 +51,7 @@ const TaskAssignment = () => {
         assignedUsers.map(async (user) => {
           await updateDoc(doc(db, "tasks", selectedTask.id), {
             status: "in progress",
-            assignedTo: assignedUsers.map((user) => user.id), // List of team members
+            assignedTo: assignedUsers.map((user) => user.id), 
           });
 
           await updateDoc(doc(db, "users", user.id), {
@@ -62,14 +62,14 @@ const TaskAssignment = () => {
 
       setProgressMessage("Finalizing team assignment...");
       alert(`Task "${selectedTask.title}" has been assigned to a team of ${teamSize}.`);
-      setTasks(tasks.filter((t) => t.id !== selectedTask.id)); // Remove the task from the list
+      setTasks(tasks.filter((t) => t.id !== selectedTask.id)); 
     } catch (error) {
       console.error("Error assigning task:", error);
       alert("Error assigning task: " + error.message);
     } finally {
       setIsAssigning(false);
       setProgressMessage("");
-      setSelectedTask(null); // Close the popup
+      setSelectedTask(null); 
     }
   };
 

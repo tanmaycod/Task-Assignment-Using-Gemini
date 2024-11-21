@@ -20,47 +20,48 @@ This project is an AI-powered task assignment system that leverages the Gemini A
 
 ### **Installation**
 
-1.  bashCopy codegit clone https://github.com/tanmaycod/Task-Assignment-Using-Gemini.gitcd Task-Assignment-Using-Gemini
+1. **git clone https://github.com/tanmaycod/Task-Assignment-Using-Gemini.git
+ cd Task-Assignment-Using-Gemini**
+ 
+2. **npm install**
     
-2.  bashCopy codenpm install
-    
-3.  bashCopy codenpm start
-    
-4.  Open your browser and navigate to:
-    
-    *   **Create Task**: [http://localhost:3000/create-task](http://localhost:3000/create-task)
-        
-    *   **Assign Task**: [http://localhost:3000/assign-task](http://localhost:3000/assign-task)
+3.  **npm start**
         
 
 ### **Firebase Configuration**
 
-1.  Go to the Firebase Console.
+1.  **Go to the Firebase Console.**
     
-2.  Create a new project and navigate to the **Project Settings**.
+2.  **Create a new project**
+
+3.  **In FirebaseConfig.js
+const firebaseConfig = { 
+apiKey: "YOUR\_API\_KEY", 
+authDomain: "YOUR\_AUTH\_DOMAIN", 
+projectId: "YOUR\_PROJECT\_ID", 
+storageBucket: "YOUR\_STORAGE\_BUCKET",
+messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID", 
+appId: "YOUR\_APP\_ID",
+};**
     
-3.  Under the **General** tab, find the Firebase configuration object.
-    
-4.  javascriptCopy codeconst firebaseConfig = { apiKey: "YOUR\_API\_KEY", authDomain: "YOUR\_AUTH\_DOMAIN", projectId: "YOUR\_PROJECT\_ID", storageBucket: "YOUR\_STORAGE\_BUCKET", messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID", appId: "YOUR\_APP\_ID",};
-    
-5.  Enable **Firestore**:
-    
+4.  Enable **Firestore**:
     *   Go to the **Firestore Database** section and create a database in "test mode."
-        
-6.  Enable **Authentication**:
+    
+5.  Enable **Authentication**:
     
     *   Go to the **Authentication** section, and enable **Email/Password** sign-in.
         
 
 ### **Gemini API Key Configuration**
 
-1.  Visit the Gemini API Documentation.
+1. **Visit Google AI Studio.**
     
-2.  Sign in with your Google Cloud account.
+2.  **Sign in with your Google account.**
     
-3.  Enable the Gemini API and create an API key in the **API & Services** section of Google Cloud Console.
+3.  **Get API key.**
     
-4.  javascriptCopy codeconst apiKey = "YOUR\_GEMINI\_API\_KEY";
+4.  **In GeminiAI.js**
+const apiKey = "YOUR\_GEMINI\_API\_KEY"; 
     
 
 **How to Use**
@@ -68,9 +69,9 @@ This project is an AI-powered task assignment system that leverages the Gemini A
 
 ### **Create a Task**
 
-1.  Navigate to [http://localhost:3000/create-task](http://localhost:3000/create-task).
+1.  **Navigate to** [http://localhost:3000/create-task](http://localhost:3000/create-task).
     
-2.  Fill in the task details:
+2.  **Fill in the task details:**
     
     *   Title
         
@@ -83,59 +84,52 @@ This project is an AI-powered task assignment system that leverages the Gemini A
 3.  Click **Create Task**. The task will be added to the database.
     
 
-### **Assign a Task**
+### **Assigning a Task: Detailed Process**
 
-1.  Navigate to [http://localhost:3000/assign-task](http://localhost:3000/assign-task).
+1.  **Navigate to the Assign Task Page:**
     
-2.  Select a task from the list of pending tasks.
-    
-3.  Specify the team size.
-    
-4.  Click **Apply** to assign the task to a team.
-    
-
-### **Navigation**
-
-*   **Admin Dashboard**: /admin
-    
-    *   Manage tasks and reassign team members.
+    *   Open your browser and go to [http://localhost:3000/assign-task](http://localhost:3000/assign-task).
         
-*   **Member Dashboard**: /member
-    
-    *   View and complete tasks assigned to you.
+    *   You will see a list of all **pending tasks** available for assignment.
         
-*   **Create Task**: /create-task
+2.  **Select a Task**:
     
-    *   Add new tasks to the system.
+    *   Browse through the displayed tasks.
         
-*   **Assign Task**: /assign-task
-    
-    *   Assign tasks to team members or individuals.
+    *   Each task will include details like:
         
-
-**Dependencies**
-----------------
-
-*   React.js
+        *   **Title**: The name of the task.
+            
+        *   **Description**: Information about the task requirements.
+            
+        *   **Skills Required**: The specific skills needed to complete the task.
+            
+    *   Click the **Assign Task** button associated with the task you want to assign.
+        
+3.  **Specify the Team Size**:
     
-*   Firebase (Firestore and Authentication)
+    *   A popup will appear asking you to specify the **team size**.
+        
+    *   Enter the desired number of team members in the input field.
+        
+    *   **Note:**
+        *   The maximum team size allowed depends on the number of available users with the required skills.
+            
+        *   Ensure the team size does not exceed the number of users matching the task's criteria.
+            
+4.  **Click Apply**:
     
-*   Framer Motion
+    *   Once the team size is entered, click the **Apply** button to assign the task.
+        
+    *   The system will:
+        
+        *   Use the **Gemini API** to intelligently select the best team members based on the required skills and user availability.
+            
+        *   Update the task status from **Pending** to **In Progress**.
     
-*   Gemini API
-    
-
-**Folder Structure**
---------------------
-
-Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQLGroovyHTMLJavaJavaScriptJSONJSXKotlinLaTeXLessLuaMakefileMarkdownMATLABMarkupObjective-CPerlPHPPowerShell.propertiesProtocol BuffersPythonRRubySass (Sass)Sass (Scss)SchemeSQLShellSwiftSVGTSXTypeScriptWebAssemblyYAMLXML`   cssCopy codesrc/  ├── components/  │   ├── AdminDashboard.js  │   ├── MemberDashboard.js  │   ├── CreateTask.js  │   ├── TaskAssignment.js  │   └── Auth.js  ├── context/  │   └── AuthContext.js  ├── utils/  │   ├── FirebaseConfig.js  │   └── GeminiAPI.js  ├── App.css  └── App.js   `
-
+        
 **Future Enhancements**
 -----------------------
-
-*   Add role-based permissions.
-    
-*   Improve UI with more animations.
     
 *   Integrate additional AI capabilities.
     
@@ -145,11 +139,11 @@ Plain textANTLR4BashCC#CSSCoffeeScriptCMakeDartDjangoDockerEJSErlangGitGoGraphQL
 
 1.  Fork the repository.
     
-2.  bashCopy codegit checkout -b feature/your-feature
+2.  **git checkout -b feature/your-feature**
     
-3.  bashCopy codegit commit -m "Add your message"
+3.  **git commit -m "Add your message"**
     
-4.  bashCopy codegit push origin feature/your-feature
+4.  **git push origin feature/your-feature**
     
 5.  Open a pull request.
     

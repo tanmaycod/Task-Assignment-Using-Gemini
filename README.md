@@ -131,6 +131,28 @@ This project is an AI-powered task assignment system that leverages the Gemini A
         *   Use the **Gemini API** to intelligently select the best team members based on the required skills and user availability.
             
         *   Update the task status from **Pending** to **In Progress**.
+
+
+
+https://github.com/user-attachments/assets/ee9f464b-7137-4051-9d59-87ceeeb9dbc0
+
+
+https://github.com/user-attachments/assets/36ee7c2d-518c-458d-beeb-a7734274cec9
+
+
+
+https://github.com/user-attachments/assets/73b8f879-f02f-4be5-bb3d-e1a0e8662afc
+
+
+
+https://github.com/user-attachments/assets/5ff67f4a-7d2a-4024-a25f-6caa8914ff9a
+
+
+
+
+https://github.com/user-attachments/assets/1b6163af-33a3-4ed6-8125-ae6afa67d9ca
+
+
     
         
 **Future Enhancements**

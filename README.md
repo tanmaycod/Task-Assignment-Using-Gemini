@@ -20,12 +20,15 @@ This project is an AI-powered task assignment system that leverages the Gemini A
 
 ### **Installation**
 
-1. **git clone https://github.com/tanmaycod/Task-Assignment-Using-Gemini.git
- cd Task-Assignment-Using-Gemini**
+1. ```bash
+   git clone https://github.com/tanmaycod/Task-Assignment-Using-Gemini.git
+   cd Task-Assignment-Using-Gemini
  
-2. **npm install**
+2. ```bash
+   npm install
     
-3.  **npm start**
+3.  ```bash
+    npm start
         
 
 ### **Firebase Configuration**
@@ -34,15 +37,16 @@ This project is an AI-powered task assignment system that leverages the Gemini A
     
 2.  **Create a new project**
 
-3.  **In FirebaseConfig.js
-   const firebaseConfig = { 
-apiKey: "YOUR\_API\_KEY", 
-authDomain: "YOUR\_AUTH\_DOMAIN", 
-projectId: "YOUR\_PROJECT\_ID", 
-storageBucket: "YOUR\_STORAGE\_BUCKET",
-messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID", 
-appId: "YOUR\_APP\_ID",
-};**
+3.  **In FirebaseConfig.js**
+       ```bash
+       const firebaseConfig = { 
+       apiKey: "YOUR\_API\_KEY", 
+       authDomain: "YOUR\_AUTH\_DOMAIN", 
+       projectId: "YOUR\_PROJECT\_ID", 
+       storageBucket: "YOUR\_STORAGE\_BUCKET",
+       messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID", 
+       appId: "YOUR\_APP\_ID",
+       };
     
 5.  Enable **Firestore**:
     *   Go to the **Firestore Database** section and create a database in "test mode."
@@ -61,7 +65,8 @@ appId: "YOUR\_APP\_ID",
 3.  **Get API key.**
     
 4.  **In GeminiAI.js**
-const apiKey = "YOUR\_GEMINI\_API\_KEY"; 
+    ```bash
+    const apiKey = "YOUR\_GEMINI\_API\_KEY"; 
     
 
 **How to Use**
@@ -139,11 +144,14 @@ const apiKey = "YOUR\_GEMINI\_API\_KEY";
 
 1.  Fork the repository.
     
-2.  **git checkout -b feature/your-feature**
+2.  ```bash
+    git checkout -b feature/your-feature
     
-3.  **git commit -m "Add your message"**
+3.  ```bash
+    git commit -m "Add your message"
     
-4.  **git push origin feature/your-feature**
+4.  ```bash
+    git push origin feature/your-feature
     
 5.  Open a pull request.
     
@@ -152,3 +160,8 @@ const apiKey = "YOUR\_GEMINI\_API\_KEY";
 -----------
 
 This project is licensed under the MIT License.
+
+**Author**
+----------
+
+Developed by [Tanmay Patil](https://github.com/tanmaycod).

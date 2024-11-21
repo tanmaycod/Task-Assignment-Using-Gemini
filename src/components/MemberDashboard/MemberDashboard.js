@@ -20,7 +20,7 @@ const MemberDashboard = () => {
         navigate("/");
     };
 
-    // Fetch tasks assigned to the logged-in user
+    
     useEffect(() => {
         const fetchTasks = async () => {
             if (!user) return;
@@ -32,14 +32,14 @@ const MemberDashboard = () => {
                 ...doc.data(),
             }));
 
-            // Sort tasks: "in progress" first, then "completed"
+           
             fetchedTasks.sort((a, b) => {
                 if (a.status === "in progress" && b.status === "completed") return -1;
                 if (a.status === "completed" && b.status === "in progress") return 1;
                 return 0;
             });
 
-            // Fetch team details for team tasks
+            
             const teamInfo = {};
             for (const task of fetchedTasks) {
                 if (Array.isArray(task.assignedTo)) {
@@ -62,7 +62,7 @@ const MemberDashboard = () => {
         fetchTasks();
     }, [user]);
 
-    // Handle task completion
+   
     const handleCompleteTask = async (task) => {
         setIsCompleting(true);
         try {
@@ -71,7 +71,7 @@ const MemberDashboard = () => {
                 status: "completed",
             });
 
-            // Update availability for individual or team members
+            
             if (Array.isArray(task.assignedTo)) {
                 for (const memberId of task.assignedTo) {
                     const userRef = doc(db, "users", memberId);
@@ -87,7 +87,7 @@ const MemberDashboard = () => {
             }
 
             alert(`Task "${task.title}" has been marked as completed.`);
-            window.location.reload(); // Refresh the page
+            window.location.reload(); 
         } catch (error) {
             console.error("Error completing task:", error);
             alert("Error completing task. Please try again.");

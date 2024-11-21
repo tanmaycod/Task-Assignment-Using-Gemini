@@ -35,7 +35,7 @@ This project is an AI-powered task assignment system that leverages the Gemini A
 2.  **Create a new project**
 
 3.  **In FirebaseConfig.js
-const firebaseConfig = { 
+   const firebaseConfig = { 
 apiKey: "YOUR\_API\_KEY", 
 authDomain: "YOUR\_AUTH\_DOMAIN", 
 projectId: "YOUR\_PROJECT\_ID", 
@@ -44,10 +44,10 @@ messagingSenderId: "YOUR\_MESSAGING\_SENDER\_ID",
 appId: "YOUR\_APP\_ID",
 };**
     
-4.  Enable **Firestore**:
+5.  Enable **Firestore**:
     *   Go to the **Firestore Database** section and create a database in "test mode."
     
-5.  Enable **Authentication**:
+6.  Enable **Authentication**:
     
     *   Go to the **Authentication** section, and enable **Email/Password** sign-in.
         
